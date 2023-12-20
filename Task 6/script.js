@@ -42,7 +42,9 @@ document.body.appendChild(resultDiv)
 // 2 Funkcija
 function getUserAverageAge(usersArray) {
   const totalAge = usersArray.reduce((sum, user) => sum + user.age, 0)
-  return totalAge - usersArray.length
+  const averageAge = totalAge / usersArray.length
+  return averageAge.toFixed(2)
+
 }
 
 const averageAge = getUserAverageAge(users)
